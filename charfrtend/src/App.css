@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+
+.sidebar {
+  display: flex;
+   height: 100vh;
+   float: left;
+   overflow: 'scroll initial';
+}
