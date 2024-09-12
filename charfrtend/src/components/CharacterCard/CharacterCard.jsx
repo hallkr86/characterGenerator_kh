@@ -1,34 +1,139 @@
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+import CharacterDetails from "../../Pages/CharacterDetails";
+import { Link } from "react-router-dom";
 
-function CharacterCard() {
+function CharacterCard({ character, power, slug}) {
 
  
-  const [data, setData] = useState([]);
+//   const [data, setData] = useState([]);
 
-  useEffect(() => {
-      fetch('http://localhost:8000')
-          .then(response => response.json())
-          .then(data => setData(data))
-          .catch(error => console.error('Error fetching data:', error));
-  }, []);
+//   useEffect(() => {
+//       fetch(`http://127.0.0.1:8000/reacts/${slug}`)
+//           .then(response => response.json())
+//           .then(data => setData(data))
+//           .catch(error => console.error('Error fetching data:', error));
+//   }, [slug]);
+
+
 
   return (
-      <div>
-          <h1>Data from Django</h1>
-          <ul>
-              {data.map(item => (
-                  <li key={item.character}>{item.power}</li>
+    
+    //   <div className="container">
+    //     <div className="row">
+    //     {data.map((output, id) => (
+    //         <div className="col-md-4" key= {id}>
+            <Card border="primary" style={{ width: '18rem' }}>
+            <Card.Body>
+                <Link to={`/character/${slug}`} style={{textDecoration: "none", color:"black"}}>
+           <Card.Title>{character}</Card.Title>
+           </Link> 
+                <Card.Text> Power: {power}</Card.Text>     
+              
+              <Button href={`/EditCharacter/${slug}`}>Edit</Button>
+              <Button href={`/DeleteCharacter/${slug}`}>Delete</Button>
+          </Card.Body>
+          </Card>
+        //   </div>
+    );}
+    // </div>
+    //   </div>
+      
+
+ 
+//         );
+        
+//   };
+          {/* <Card border="primary" style={{ width: '18rem' }}>
+          <Link to="CharacterDetails"style={{textDecoration: "none", color:"black"}}>
+           <h1>Characters Created</h1> 
+           </Link>
+          <Card.Body>
+              {data.map((output, id) => (
+                  <div key= {id}>
+                  <h5>{output.character}</h5>
+                  <h5>{output.power}</h5>
+
+                  </div>
               ))}
-          </ul>
-      </div>
-  );
-};
+              <Button href="EditCharacter">Edit</Button>
+              <Button href="EditCharacter">Edit</Button>
+          </Card.Body>
+          </Card>
+
+          <Card border="primary" style={{ width: '18rem' }}>
+          <Link to="CharacterDetails" style={{textDecoration: "none", color:"black"}}>
+           <h1>Characters Created</h1> 
+           </Link>
+          <Card.Body>
+              {data.map((output, id) => (
+                  <div key= {id}>
+                  <h5>{output.character}</h5>
+                  <h5>{output.power}</h5>
+
+                  </div>
+              ))}
+              <Button href="EditCharacter">Edit</Button>
+              <Button href="EditCharacter">Edit</Button>
+          </Card.Body>
+          </Card>
+
+          <Card border="primary" style={{ width: '18rem' }}>
+          <Link to="CharacterDetails" style={{textDecoration: "none", color:"black"}}>
+           <h1>Characters Created</h1> 
+           </Link>
+          <Card.Body>
+              {data.map((output, id) => (
+                  <div key= {id}>
+                  <h5>{output.character}</h5>
+                  <h5>{output.power}</h5>
+
+                  </div>
+              ))}
+              <Button href="EditCharacter">Edit</Button>
+              <Button href="EditCharacter">Edit</Button>
+          </Card.Body>
+          </Card>
+
+          <Card border="primary" style={{ width: '18rem' }}>
+          <Link to="CharacterDetails" style={{textDecoration: "none", color:"black"}}>
+           <h1>Characters Created</h1> 
+           </Link>
+          <Card.Body>
+              {data.map((output, id) => (
+                  <div key= {id}>
+                  <h5>{output.character}</h5>
+                  <h5>{output.power}</h5>
+
+                  </div>
+              ))}
+              <Button href="EditCharacter">Edit</Button>
+              <Button href="EditCharacter">Edit</Button>
+          </Card.Body>
+          </Card>
+
+          <Card border="primary" style={{ width: '18rem' }}>
+          <Link to="CharacterDetails" style={{textDecoration: "none", color:"black"}}>
+           <h1>Characters Created</h1> 
+           </Link>
+          <Card.Body>
+              {data.map((output, id) => (
+                  <div key= {id}>
+                  <h5>{output.character}</h5>
+                  <h5>{output.power}</h5>
+
+                  </div>
+              ))}
+              <Button href="EditCharacter">Edit</Button>
+              <Button href="EditCharacter">Edit</Button>
+          </Card.Body>
+          </Card>
+
+       */}
+  
    
   //   state = { details: [], }
 
@@ -64,4 +169,4 @@ function CharacterCard() {
 
 
   
-  export default CharacterCard;
+export default CharacterCard;

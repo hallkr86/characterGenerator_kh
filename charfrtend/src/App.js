@@ -1,9 +1,9 @@
 import axios from 'axios';
-import React from 'react';
+import React, { Component } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./components/Home/Home";
-import CharacterCard from "./components/CharacterCard/CharacterCard";
-import Header from "./components/Header/Header";
+// import Home from "./components/Home/Home";
+import CharacterCard from "./components/CharacterCardcontainer/CharacterCardcontainer";
+import Navbar from "./components/Navbar/Navbar";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,9 +11,55 @@ import {
   Link,
   BrowserRouter
 } from "react-router-dom";
+import "./App.css";
+
+import HomePage from './Pages/HomePage';
+import CreateCharacter from './Pages/CreateCharacter';
+import CharacterDetails from './Pages/CharacterDetails';
+import EditCharacter from "./Pages/EditCharacter";
 
 
-class App extends React.Component {
+class App extends Component {
+
+
+
+
+render() {
+  return (
+    <BrowserRouter>
+      
+            
+           <div className="App">
+            
+            <Navbar />
+            <Routes>
+          <Route path="/" element={<HomePage/>} />
+          <Route path="/CreateCharacter" element={<CreateCharacter/>} />
+          <Route path="/character/:slug" element={<CharacterDetails/>} />
+          <Route path="/EditCharacter" element={<EditCharacter/>} />
+          
+         
+        </Routes>
+        
+        
+           {/* <HomePage /> */}
+          
+            
+            
+            {/* <Controller /> */}
+              
+          
+
+       
+</div>
+     
+    </BrowserRouter>
+  );
+}
+
+
+}
+
 
 //   state = { details: [], }
 
@@ -53,42 +99,5 @@ class App extends React.Component {
 //       </>
 //     );
 //   }
-
-
-render() {
-  return (
-    <BrowserRouter>
-      
-        
-          
-            
-           
-            <Header />
-             <CharacterCard />
-              
-           
-            
-         
-       
-
-       
-        <Routes>
-          <Route exact path="/" component={Home}/>
-          <Route exact path="/characters" component={CharacterCard}/>
-          
-          
-          
-         
-        </Routes>
-
-       
-
-     
-    </BrowserRouter>
-  );
-}
-
-
-}
 
 export default App;

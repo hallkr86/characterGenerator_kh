@@ -17,10 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import re_path as url
+# from .views import ReactView, ReactListCreateView, ReactDetailView
 
-from app.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', ReactView.as_view(), name="anything")
+    # path('', ReactView.as_view(), name="anything"),
+    path("", include("app.urls"))
 ]
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     path('api/items/', ItemListCreateView.as_view(), name='item-list-create'),
+#     path('api/items/<int:pk>/', ItemDetailView.as_view(), name='item-detail'),
+   
+# ]
