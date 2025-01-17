@@ -28,7 +28,7 @@ function CharacterCardcontainer() {
             {data.map((output, id) => (
                 <div className="col-md-4" key={id}>
             
-           <h2>Characters</h2>
+          <br></br>
            <CharacterCard character={output.character} power={output.power} slug={output.slug} />
            </div>
         ))}

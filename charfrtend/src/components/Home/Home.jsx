@@ -1,22 +1,29 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import React, { Component } from 'react';
-import CharacterCard from '../CharacterCard/CharacterCardcontainer';
-import "./Home.css";
+import CharacterCardcontainer from '../CharacterCardcontainer/CharacterCardcontainer';
+import { Link } from "react-router-dom";
+
 
 class Home extends Component {
     render() {
         return(
+          <div className="intro">
           <Card border="primary" style={{ width: '58rem' }}>
-          <Card.Header>Welcome!</Card.Header>
+          <Card.Header className="char-title"><h2>Welcome to Character Generator!</h2></Card.Header>
           <Card.Body>
-            <Card.Title>Primary Card Title</Card.Title>
+            <Card.Title>Try to get as creative as possible creating a name for your character and giving them special powers!</Card.Title>
             <Card.Text>
               Enjoy Creating your character!!!
             </Card.Text>
-            <Button href= "CharacterCard">Click here to create</Button>
+
+            <Link to={`/CharacterCardcontainer`}>
+              <Button>Click here to get started</Button>
+              </Link>
+            
           </Card.Body>
         </Card>
+        </div>
         )
 
     }

@@ -11,9 +11,11 @@ class Header extends Component {
     render() {
         return(
           <div>
-          <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="bg-body-tertiary justify-content-center">
-            <Navbar.Brand href="/">Character Generator</Navbar.Brand>
-            <Button href="/CreateCharacter">Create Character </Button>
+          <Navbar bg="dark" data-bs-theme="dark" expand="lg" className="custom-navbar bg-body-tertiary justify-content-center">
+            <Navbar.Brand href="/"><h2>Character Generator</h2></Navbar.Brand>
+            <Button className="me-2" href="/CharacterCardcontainer"><h4>My Characters</h4></Button>
+            
+            <Button className="me-2" href="/CreateCharacter"><h4>Create Character</h4> </Button>
           
             
             

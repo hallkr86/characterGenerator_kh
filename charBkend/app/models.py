@@ -10,10 +10,10 @@ class React(models.Model):
     power = models.CharField(max_length=200)
     slug = models.SlugField(unique=True, blank=True)
 
-def __str__(self):
+    def __str__(self):
         return self.character
 
-def save(self, *args, **kwargs):
+    def save(self, *args, **kwargs):
         if not self.slug:
             slug_base = slugify(self.character)
             slug_candidate = slug_base

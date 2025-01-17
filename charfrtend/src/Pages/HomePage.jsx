@@ -2,6 +2,8 @@ import React from 'react';
 import CharacterCardcontainer from '../components/CharacterCardcontainer/CharacterCardcontainer';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Home from '../components/Home/Home';
+
 
 
 
@@ -11,9 +13,9 @@ const HomePage = () => {
         
         return(
 
-        
-
-              <CharacterCardcontainer />
+        <Home />
+             
+            //   <CharacterCardcontainer />
 
             
         )
