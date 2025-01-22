@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.urls import re_path as url
+from django.views.generic import TemplateView
 # from .views import ReactView, ReactListCreateView, ReactDetailView
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("", TemplateView.as_view(template_name="build/index.html")),
     # path('', ReactView.as_view(), name="anything"),
     path("", include("app.urls"))
 ]
