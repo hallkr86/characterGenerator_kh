@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-#^l68k7f2^i_p71r9s!@%_uwzinb)knv$u4_=asipem%s&(chj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'charactergenerator-kh.onrender.com',
+]
 
 
 # Application definition
