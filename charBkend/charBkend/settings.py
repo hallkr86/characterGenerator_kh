@@ -28,7 +28,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'charactergenerator-kh.onrender.com',
-    'characterGenerator_kh-1.onrender.com',
 ]
 
 
@@ -64,7 +63,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
     "http://127.0.0.1:8000",
-    "https://charactergenerator-kh-1.onrender.com/",
+    "https://charactergenerator-kh-1.onrender.com",
 ]
 
 
