@@ -1,0 +1,1 @@
+web: gunicorn characterGenerator_kh.wsgi
