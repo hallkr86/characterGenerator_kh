@@ -31,13 +31,10 @@ SECRET_KEY = 'django-insecure-#^l68k7f2^i_p71r9s!@%_uwzinb)knv$u4_=asipem%s&(chj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
-
-RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if RENDER_EXTERNAL_HOSTNAME:
-    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
-    
-
+ALLOWED_HOSTS = [
+    'charactergenerator-kh.onrender.com',
+    "127.0.0.1", "localhost",
+]
 
 
 # Application definition
