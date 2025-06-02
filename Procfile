@@ -1,1 +1,1 @@
-web: gunicorn characterGenerator_kh.wsgi
+web: gunicorn charBkend.wsgi:application --bind 0.0.0.0:$PORT --chdir charBkend
